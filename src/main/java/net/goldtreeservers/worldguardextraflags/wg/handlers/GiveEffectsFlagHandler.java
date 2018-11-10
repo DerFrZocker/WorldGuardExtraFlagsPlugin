@@ -141,7 +141,7 @@ public class GiveEffectsFlagHandler extends HandlerWrapper
 					{
 						if (SupportedFeatures.isMobEffectColorsSupported())
 						{
-							player.addPotionEffect(new PotionEffect(effect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles(), removedEffect.getColor()), true);
+							player.addPotionEffect(new PotionEffect(effect.getKey(), timeLeft, removedEffect.getAmplifier(), removedEffect.isAmbient(), removedEffect.isParticles()), true);
 						}
 						else
 						{

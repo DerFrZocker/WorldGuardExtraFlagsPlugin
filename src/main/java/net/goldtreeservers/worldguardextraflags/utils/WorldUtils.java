@@ -3,6 +3,7 @@ package net.goldtreeservers.worldguardextraflags.utils;
 import org.bukkit.World;
 
 import com.sk89q.worldedit.BlockVector;
+import com.sk89q.worldedit.math.BlockVector3;
 import com.sk89q.worldguard.protection.flags.StateFlag.State;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 
@@ -19,8 +20,8 @@ public class WorldUtils
 			{
 				WorldGuardExtraFlagsPlugin.getPlugin().getLogger().info("Loading chunks for region " + region.getId() + " located in " + world.getName() + " due to chunk-unload flag being deny");
 				
-				BlockVector min = region.getMinimumPoint();
-				BlockVector max = region.getMaximumPoint();
+				BlockVector3 min = region.getMinimumPoint();
+				BlockVector3 max = region.getMaximumPoint();
 
 				for(int x = min.getBlockX() << 16; x <= max.getBlockX() << 16; x++)
 				{
